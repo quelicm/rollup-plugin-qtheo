@@ -1,0 +1,40 @@
+{
+	"name": "@nothnk/rollup-plugin-qtheo",
+	"version": "3.0.1",
+	"author": "Queli coto",
+	"description": "A rollup plugin to transform design tokens using Theo",
+	"main": "dist/rollup-plugin-theo.js",
+	"module": "dist/rollup-plugin-theo.esm.js",
+	"repository": "nothnk/rollup-plugin-qtheo",
+	"scripts": {
+		"build": "rollup -c",
+		"pretest": "npm run build",
+		"test": "mocha test/*.js --require @babel/register --exit",
+		"prepublish": "npm test"
+	},
+	"files": [
+		"dist"
+	],
+	"keywords": [
+		"rollup-plugin"
+	],
+	"publishConfig": { "registry": "https://npm.pkg.github.com/" },
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/nothnk/rollup-plugin-qtheo/issues"
+	},
+	"homepage": "https://github.com/nothnk/rollup-plugin-qtheo#readme",
+	"devDependencies": {
+		"@babel/core": "^7.5.4",
+		"@babel/register": "^7.4.4",
+		"@babel/preset-env": "^7.5.4",
+		"coffeescript": "^2.3.2",
+		"fs-extra": "^8.1.0",
+		"mocha": "^5.2.0",
+		"rollup": "^1.17.0",
+		"rollup-plugin-babel": "^4.3.3"
+	},
+	"dependencies": {
+		"theo": "^8.1.3"
+	}
+}
